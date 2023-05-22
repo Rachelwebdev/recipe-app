@@ -7,6 +7,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'pg'
 
 gem 'devise'
+gem 'letter_opener'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
