@@ -1,0 +1,32 @@
+h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.form_field {
+  width: 70%;
+  padding: 2rem 4rem;
+  margin: 0 auto;
+}
+
+.form_field input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox {
+  display: flex;
+}
+
+.checkbox input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.sign_out button {
+  background: #000;
+  color: #fff;
+  padding: 0.8rem;
+  margin-bottom: 3rem;
+  border-radius: 6px;
+}
