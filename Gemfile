@@ -3,8 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 
-gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'pg'
+gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'devise'
 gem 'letter_opener'
