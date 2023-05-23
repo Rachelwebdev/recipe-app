@@ -8,15 +8,18 @@
 
 Food.destroy_all
 User.destroy_all
+Recipe.destroy_all
 
 User.create([
   {
-    name: "Stephen Greens",
+    first_name: "Stephen",
+    last_name: "Greens",
     email: "stephengreen@gmail.com",
     password: "test123"
   },
-  {
-    name: "Wes Gibbins",
+  {    
+    first_name: "Wes",
+    last_name: "Gibbins",
     email: "wesgibbins@gmail.com",
     password: "test123"
   }
@@ -53,5 +56,41 @@ Food.create([
     }
   ]);
 
+  Recipe.create([
+    {
+      name: "Pizza",
+      preparation_time: "40 mins",
+      cooking_time: "15mins",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus urna vitae eros ultricies aliquam. Nulla vestibulum vestibulum mi, in commodo urna malesuada ac. Proin nec diam faucibus, tempor lectus vel, luctus enim. Sed aliquet massa et metus varius, in euismod lorem faucibus. Integer sed aliquam sapien.",
+      public: true,
+      user_id: 1
+    },
+    {
+      name: "Burger",
+      preparation_time: "10 mins",
+      cooking_time: "10mins",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus urna vitae eros ultricies aliquam. Nulla vestibulum vestibulum mi, in commodo urna malesuada ac. Proin nec diam faucibus, tempor lectus vel, luctus enim. Sed aliquet massa et metus varius, in euismod lorem faucibus. Integer sed aliquam sapien.",
+      public: false,
+      user_id: 2
+    },
+    {
+      name: "Lasagna",
+      preparation_time: "20 mins",
+      cooking_time: "30mins",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus urna vitae eros ultricies aliquam. Nulla vestibulum vestibulum mi, in commodo urna malesuada ac. Proin nec diam faucibus, tempor lectus vel, luctus enim. Sed aliquet massa et metus varius, in euismod lorem faucibus. Integer sed aliquam sapien.",
+      public: true,
+      user_id: 3
+    },
+    {
+      name: "Jollof Rice",
+      preparation_time: "30 mins",
+      cooking_time: "30mins",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus urna vitae eros ultricies aliquam. Nulla vestibulum vestibulum mi, in commodo urna malesuada ac. Proin nec diam faucibus, tempor lectus vel, luctus enim. Sed aliquet massa et metus varius, in euismod lorem faucibus. Integer sed aliquam sapien.",
+      public: true,
+      user_id: 4
+    },
+  ])
+
   print "Added #{Food.count} foods"
   print "Added #{User.count} users"
+  print "Added #{Recipe.count} recipes"
