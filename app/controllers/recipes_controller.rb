@@ -1,9 +1,4 @@
 class RecipesController < ApplicationController
-  # def index
-  #   # @recipes = Recipe.all.order(created_at: :asc)
-  #   # @recipes = Recipe.get_all_recipes(current_user.id)
-  #   @recipes = current_user.recipes.order(created_at: :asc)
-  # end
 
   def index
     @recipes = current_user.recipes

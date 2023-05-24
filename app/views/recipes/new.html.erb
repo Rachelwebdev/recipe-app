@@ -7,16 +7,16 @@
   <li class="li-box">
     <%= form_with model: @recipe, url: recipes_path do |form| %>
       <div>
-        <%= form.text_field :title, placeholder: 'Enter name', required: true, class: 'form-input' %>
+        <%= form.text_field :name, placeholder: 'Enter name', required: true, class: 'form-input' %>
       </div>
       <div>
-        <%= form.text_area :body, placeholder: 'Enter recipe description...', required: true, class: 'form-text-area' %>
+        <%= form.text_area :description, placeholder: 'Enter recipe description...', required: true, class: 'form-text-area' %>
       </div>
       <div>
-        <%= form.number_field :body, placeholder: 'Enter cooking time...', required: true, class: 'form-text-area' %>
+        <%= form.number_field :cooking_time, placeholder: 'Enter cooking time...', required: true, class: 'form-text-area' %>
       </div>
       <div>
-        <%= form.number_field :body, placeholder: 'Enter preparation time...', required: true, class: 'form-text-area' %>
+        <%= form.number_field :preparation_time, placeholder: 'Enter preparation time...', required: true, class: 'form-text-area' %>
       </div>
        <div class="field">
             <%= form.label :public %>
