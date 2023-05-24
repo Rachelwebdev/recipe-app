@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+  get 'pages/foods'
+  get 'pages/recipes'
+  get 'pages/shopping-lists'
   devise_for :users, controllers: {
         sessions: 'users/sessions', 
         registrations: 'users/registrations'
