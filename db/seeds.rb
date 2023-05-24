@@ -15,13 +15,25 @@ User.create([
     first_name: "Stephen",
     last_name: "Greens",
     email: "stephengreen@gmail.com",
-    password: "test123"
+    password: "password@123"
   },
   {    
     first_name: "Wes",
     last_name: "Gibbins",
     email: "wesgibbins@gmail.com",
-    password: "test123"
+    password: "password@123"
+  },
+  {    
+    first_name: "Uchechi",
+    last_name: "Nwaka",
+    email: "uchechinwaka@gmail.com",
+    password: "password@123"
+  },
+  {    
+    first_name: "Rachel",
+    last_name: "Isaac",
+    email: "rachelisaac@gmail.com",
+    password: "password@123"
   }
 ])
 
