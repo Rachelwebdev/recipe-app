@@ -20,3 +20,24 @@
   margin: 0;
   list-style: none;
 }
+
+.recipe-heading {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.recipe-container {
+  border: 3px solid black;
+  margin: 4rem;
+  display: flex;
+  padding: 1rem;
+  /* column-gap: 2rem; */
+}
+
+.left-side {
+  width: 30%;
+}
+
+.left-side h3 {
+  margin-bottom: 1rem;
+}

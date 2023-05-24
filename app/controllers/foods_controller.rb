@@ -3,6 +3,7 @@ class FoodsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @user = current_user
     @all_foods = Food.get_all_foods(current_user.id)
   end
 

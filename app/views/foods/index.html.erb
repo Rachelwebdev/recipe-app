@@ -1,3 +1,6 @@
+<%= link_to "Sign In", new_user_session_path %>
+<%= render partial: "shared/logout"%>
+
 <section class="container">
   <div class="d-flex justify-content-end p-4">
     <a href="<%=request.path%>/new">
@@ -26,4 +29,5 @@
       <% end %>
     </tbody>
   </table>
+  <%= link_to 'All Recipes', recipes_path %>
 </section>
