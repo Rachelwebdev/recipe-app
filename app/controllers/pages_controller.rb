@@ -1,13 +1,9 @@
 class PagesController < ApplicationController
-  def home
-  end
+  def home; end
 
-  def foods
-  end
+  def foods; end
 
-  def recipes
-  end
+  def recipes; end
 
-  def shopping-lists
-  end
+  def lists; end
 end
