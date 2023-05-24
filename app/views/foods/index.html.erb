@@ -1,8 +1,10 @@
 <section class="container">
+  <h3 class="fw-semibold">Your list of foods</h3>
   <div class="d-flex justify-content-end p-4">
-    <a href="<%=request.path%>/new">
-      <button class="btn btn-sm btn-primary">Add Food</button>
-    </a>
+    <a href="<%= new_food_path %>">
+  <button class="btn btn-sm btn-primary">Add Food</button>
+</a>
+
   </div>
   <table class="table table-sm table-bordered">
     <thead class="bg-light">
