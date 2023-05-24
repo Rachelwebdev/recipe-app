@@ -1,13 +1,12 @@
 class RecipesController < ApplicationController
-
   def index
     @recipes = current_user.recipes
   end
 
   def show
     @recipe = Recipe.find(params[:id])
-  end 
-  
+  end
+
   def new
     @recipe = Recipe.new
   end
@@ -16,15 +15,15 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
     if @recipe.save
-      flash[:notice] = "Recipe successfully created"
+      flash[:notice] = 'Recipe successfully created'
       redirect_to recipes_path
     else
-      flash[:alert] = "Recipe was not created"
+      flash[:alert] = 'Recipe was not created'
       render 'new'
     end
   end
-  
-  def destroy 
+
+  def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     flash[:notice] = 'Recipe deleted!'
@@ -32,8 +31,8 @@ class RecipesController < ApplicationController
   end
 
   private
-def recipe_params
-  params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
-end
 
+  def recipe_params
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
+  end
 end

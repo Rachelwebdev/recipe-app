@@ -24,9 +24,10 @@ h2 {
 }
 
 .sign_out button {
-  background: #000;
+  background: rgb(192, 89, 6);
   color: #fff;
-  padding: 0.8rem;
+  padding: 0.4rem;
   margin-bottom: 3rem;
   border-radius: 6px;
+  cursor: pointer;
 }

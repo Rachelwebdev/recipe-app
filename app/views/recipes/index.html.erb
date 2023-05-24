@@ -1,4 +1,5 @@
 <h1 class='recipe-heading'>Recipes List</h1>
+<%= link_to "Add New Recipe", new_recipe_path,  class: 'add-recipe'  %>
 
 <ul>
 <% if @recipes.blank? %>
@@ -7,16 +8,17 @@
   <% @recipes.each do |recipe| %>
     <div class='recipe-container'>     
           <div class='left-side'>
-            <%= link_to recipe.name, recipe_path(recipe) %>
+            <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-name-btn'  %>
             <% if recipe.user == current_user %>
               <%= button_to "Remove", recipe_path(recipe), method: :delete, class: "btn btn-danger" %>
             <% end %>
           </div> 
           <div class='right-side'>
-            <h2>Description: <%= recipe.description %> </h2>           
+            <h3>Description: <%= recipe.description %> </h3>           
           </div>           
     </div>
   <% end %>
   <% end %>
 </ul>
-<%= link_to "Add New Recipe", new_recipe_path %>
+
+<%= render partial: "shared/logout"%>
