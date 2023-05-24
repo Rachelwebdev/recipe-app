@@ -7,7 +7,6 @@ class Food < ApplicationRecord
   belongs_to :user
 
   def self.get_all_foods(user_id)
-    where(user_id: user_id)
+    where(user_id:)
   end
-  
 end
