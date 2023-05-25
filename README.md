@@ -24,7 +24,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Chef Baci] <a name="about-project"></a>
+# 📖 Baci Chef <a name="about-project"></a>
 
 **If making it to the Guinness book of world records sounds exciting to you, then The Baci chef app provides a comprehensive solution for managing your secret recipes, ingredients, and inventory. You can save ingredients and track what you have on hand, create recipes, and generate a shopping list based on what you need for a recipe and even track your cooking time. Additionally, the app allows you to make your recipes public, facilitating easy sharing with others who may find them useful in their own cooking endeavors.**
   <ul>
@@ -32,7 +32,7 @@
     <li>logged in user can delete their recipes</li>
     <li>Logged in user can add new recipes</li>   
     <li>Logged in user can make the recipe public or private</li> 
-    <li>Public recipes can be viewed by any user</li> 
+    <li>Public recipes can be viewed by any user</li>
   </ul>
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -183,7 +183,7 @@ If you like this project please give a⭐️ and share with your friends.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Thanks to the Microverse team for the great curriculum.
-- Hat tip to anyone whose code was used
+- Hat tip to our very own chef Hilda Bassey for the inspiration
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
