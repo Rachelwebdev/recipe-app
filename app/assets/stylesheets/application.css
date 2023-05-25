@@ -34,8 +34,6 @@
   display: flex;
   padding: 1rem;
   align-items: center;
-
-  /* column-gap: 2rem; */
 }
 
 .left-side {

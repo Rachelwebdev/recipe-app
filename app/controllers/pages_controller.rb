@@ -5,5 +5,5 @@ class PagesController < ApplicationController
 
   def recipes; end
 
-  def lists; end
+  def shopping_lists; end
 end

@@ -16,8 +16,8 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should get shopping-lists' do
-    get pages_shopping - lists_url
+  test 'should get lists' do
+    get pages_lists_url
     assert_response :success
   end
 end
