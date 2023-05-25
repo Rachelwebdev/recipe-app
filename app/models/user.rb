@@ -4,7 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  has_many :recipes
+  has_many :recipes, dependent: :destroy
   has_many :foods
   has_many :shopping_lists
+
+  # validates :first_name, presence: true, length: { minimum: 0, maximum: 50 }
+
+  def list_recipes
+    Recipe.where(user_id: id)
+  end
 end

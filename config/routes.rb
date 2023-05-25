@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :foods, only: [:index, :new, :create, :destroy]
   end
+  resources :recipes do
+    resources :recipe_foods
+  end
+  
   resources :public_recipes
 
   resources :recipes, only: [:index, :show, :new, :create, :destroy]
