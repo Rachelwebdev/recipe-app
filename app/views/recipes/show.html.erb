@@ -1,2 +1,30 @@
 <h1><%= @recipe.name %></h1>
-<p><%= @recipe.description %></p>
+
+<div class="switch">
+  <div class='recipe_desc'>
+    <p>
+      Preparation Time: <%= @recipe.preparation_time %>
+      <% if @recipe.preparation_time > 1 %>
+        hours
+      <% else %>
+        hour
+      <% end %>
+    </p>
+    <p>
+      Cooking Time: <%= @recipe.cooking_time %>
+      <% if @recipe.cooking_time > 1 %>
+        hours
+      <% else %>
+        hour
+      <% end %>
+    </p>
+    <p><%= @recipe.description %></p>
+  </div>
+  <div class='toggle'>
+    <p>Public</p>
+    <label class="toggle-switch">
+      <input type="checkbox" id="toggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
