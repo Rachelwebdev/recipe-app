@@ -34,7 +34,6 @@
   display: flex;
   padding: 1rem;
   align-items: center;
-  /* column-gap: 2rem; */
 }
 
 .left-side {
@@ -61,6 +60,10 @@
   cursor: pointer;
   border-radius: 4px;
   transition: all 1000ms ease-in-out;
+}
+
+.form-button {
+  margin-bottom: 2rem;
 }
 
 .form-button:hover,
@@ -100,21 +103,10 @@
   row-gap: 1rem;
 }
 
-.li-box {
-  width: 30%;
-  margin: 0 auto;
-  margin-top: 2rem;
-  border: 2px solid rgb(192, 89, 6);
-}
-
 .form-div {
   padding: 0.5rem;
 }
 
 .form-div input {
   padding: 0.5rem;
-}
-
-.form-button {
-  margin-bottom: 2rem;
 }
