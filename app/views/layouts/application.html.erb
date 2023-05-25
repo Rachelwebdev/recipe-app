@@ -28,11 +28,15 @@
       </div>
 
       <div>
+
         <% if user_signed_in? %>
+        <%= render partial: "shared/logout"%>
           <%= link_to "Foods", foods_path, class: "navbar-brand text fw-medium lh-sm fs-6" %>
           <%= link_to "Recipes", recipes_path, class: "navbar-brand text fw-medium lh-sm fs-6" %>
           <%= link_to "Public Recipes", public_recipes_path, class: "navbar-brand text fw-medium lh-sm fs-6" %>
           <%= link_to "Shopping List", shopping_lists_path, class: "navbar-brand text fw-medium lh-sm fs-6" %>
+          
+
         <% else %>
           <a class="navbar-brand fw-medium lh-sm fs-6" href="<% request.path %>/users/sign_up">
             Sign up
