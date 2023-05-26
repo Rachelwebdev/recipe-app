@@ -1,0 +1,158 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.recipe-heading,
+.create-recipe-header {
+  text-align: center;
+  padding-top: 2rem;
+  color: rgb(192, 89, 6);
+}
+
+.recipe-container {
+  border: 3px solid rgb(192, 89, 6);
+  margin: 4rem;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.left-side {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.left-side h3 {
+  margin-bottom: 1rem;
+}
+
+.recipe-name-btn {
+  color: rgb(192, 89, 6);
+  font-size: 1.3rem;
+}
+
+.btn-danger,
+.form-button {
+  background-color: #fff;
+  padding: 0.3rem;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 1000ms ease-in-out;
+}
+
+.form-button {
+  margin-bottom: 2rem;
+}
+
+.form-button:hover,
+.btn-danger:hover {
+  font-size: 16px;
+  color: rgb(192, 89, 6);
+}
+
+.add-recipe {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 3rem;
+  text-decoration: none;
+  font-size: 21px;
+  transition: all 1000ms ease-in-out;
+}
+
+.add-recipe:hover {
+  font-size: 25px;
+  color: rgb(192, 89, 6);
+}
+
+/* Create Recipe Form */
+
+.create-recipe-header {
+  font-size: 2rem;
+}
+
+.li-box {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  row-gap: 1rem;
+}
+
+.form-div {
+  padding: 0.5rem;
+}
+
+.form-div input {
+  padding: 0.5rem;
+}
+
+/* Recipe details */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}

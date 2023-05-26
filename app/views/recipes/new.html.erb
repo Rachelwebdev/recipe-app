@@ -1,0 +1,28 @@
+ 
+
+<h2 class='create-recipe-header'>Create a New Recipe</h2>
+
+<ul>
+    <li class="li-box">
+        <%= form_with model: @recipe, url: recipes_path do |form| %>
+        <div class="form-div" >
+            <%= form.text_field :name, placeholder: 'Enter name', required: true, class: 'form-input' %>
+        </div>
+        <div class="form-div">
+            <%= form.text_area :description, placeholder: 'Enter recipe description...', required: true, class: 'form-text-area' %>
+        </div>
+        <div class="form-div">
+            <%= form.number_field :cooking_time, placeholder: 'Enter cooking time...', required: true, class: 'form-text-area' %>
+        </div>
+        <div class="form-div">
+            <%= form.number_field :preparation_time, placeholder: 'Enter preparation time...', required: true, class: 'form-text-area' %>
+        </div>
+        <div class="field form-div">
+                <%= form.label :public %>
+                <%= form.select :public, options_for_select(['true', 'false']), prompt: 'Select a category' %>
+            </div>
+        <%= form.submit "Create recipe", class: "button form-button" %>
+        <% end %>
+        <%= render partial: "shared/logout"%>
+    </li>
+</ul>

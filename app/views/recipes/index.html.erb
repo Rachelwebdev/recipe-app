@@ -1,0 +1,22 @@
+<h1 class='recipe-heading'>Recipes List</h1>
+<%= link_to "Add New Recipe", new_recipe_path,  class: 'add-recipe'  %>
+
+<ul>
+<% if @recipes.blank? %>
+  <p>No recipe available</p>
+<% else %>
+  <% @recipes.each do |recipe| %>
+    <div class='recipe-container'>     
+          <div class='left-side'>
+            <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-name-btn'  %>
+            <% if recipe.user == current_user %>
+              <%= button_to "Remove", recipe_path(recipe), method: :delete, class: "btn btn-danger" %>
+            <% end %>
+          </div> 
+          <div class='right-side'>
+            <h3>Description: <%= recipe.description %> </h3>           
+          </div>           
+    </div>
+  <% end %>
+  <% end %>
+</ul>

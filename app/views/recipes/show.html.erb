@@ -1,0 +1,66 @@
+
+<section class="container">
+<h1><%= @recipe.name %></h1>
+  <div class="switch">
+    <div class='recipe_desc'>
+      <p>
+        Preparation Time: <%= @recipe.preparation_time %>
+        <% if @recipe.preparation_time > 1 %>
+        hours
+        <% else %>
+        hour
+        <% end %>
+      </p>
+      <p>
+        Cooking Time: <%= @recipe.cooking_time %>
+        <% if @recipe.cooking_time > 1 %>
+          hours
+        <% else %>
+        hour
+        <% end %>
+      </p>
+      <p><%= @recipe.description %></p>
+    </div>
+    <div class='toggle'>
+      <p>Public</p>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between p-2">
+  </div>
+  <div class="d-flex justify-content-between">
+    <%= link_to "Generate shopping list", shopping_lists_path, class: "btn btn-primary" %>
+    <%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe.id), class: "btn btn-primary" %>
+  </div>
+  <hr class="line" />
+
+  <div class="mt-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Food</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Value</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipe_foods.each do |recipe_food| %>
+        <tr>
+          <td><%= recipe_food.food.name %></td>
+          <td><%= recipe_food.quantity %></td>
+          <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
+          <td>
+            <span><%= link_to 'Modify', edit_recipe_recipe_food_path(@recipe, recipe_food), class: "btn btn-outline-primary btn-sm" %></span>
+            <span><%= link_to 'Remove', recipe_recipe_food_path(@recipe, recipe_food), data: { turbo_method: 'delete', turbo_confirm: "Are you sure to delete" }, class: "btn btn-outline-danger btn-sm" %></span>
+          </td>
+        </tr>
+      </tbody>
+      <%end%>
+    </table>
+  </div>
+  </div>
+</section>  
