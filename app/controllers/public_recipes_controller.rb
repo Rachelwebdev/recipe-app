@@ -11,8 +11,8 @@ class PublicRecipesController < ApplicationController
   def calculate_total_price(recipes)
     total_price = 0
     recipes.each do |recipe|
-      recipe.recipe_foods.each do |recipe_food|
-        total_price += recipe_food.price
+      recipe.recipe_foods.each do |_recipe_food|
+        total_price += 1
       end
     end
     total_price
