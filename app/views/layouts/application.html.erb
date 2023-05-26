@@ -19,7 +19,7 @@
       <div>
         <% if user_signed_in? %>
           <%= link_to "Chef Baci", foods_path, class: "navbar-brand text-light lh-sm fw-semibold" %>
-          <span class="fw-semibold">Welcome, <%= current_user.first_name %></span>  
+          <span class="fw-semibold">Welcome, <%= current_user.name %></span>  
         <% else %>
           <a class="navbar-brand text lh-sm fw-semibold" href="/">
             Chef Baci

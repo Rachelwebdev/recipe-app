@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :foods
   has_many :shopping_lists
 
-  # validates :first_name, presence: true, length: { minimum: 0, maximum: 50 }
+  # validates :name, presence: true, length: { minimum: 0, maximum: 50 }
 
   def list_recipes
     Recipe.where(user_id: id)

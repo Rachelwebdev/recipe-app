@@ -8,7 +8,7 @@
       <div class="d-flex gap-5 justify-content-around ">  
         <div>
           <h3><%= recipe.name %></h3>
-          <p>by: <%= recipe.user.first_name %></p>
+          <p>by: <%= recipe.user.name %></p>
         </div>
         <div class="d-flex flex-column col-8">
           <h4>Total food: <span class="color-red"><%= recipe.recipe_foods.length %></span></h4>
