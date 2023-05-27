@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 
-gem 'pg'
+gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'cancancan'
